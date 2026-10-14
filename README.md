@@ -28,7 +28,7 @@ what-cd-misses/
 │   ├── tools/, utils/   training loop, builders, utilities
 │   ├── main.py          training entry point
 │   ├── eval_ckpt_claude_v2.py   reconstruction export and geometric evaluation
-│   └── figures/, renders/       paper figures and render outputs
+│   └── figures/, renders/       working figures and render outputs
 ├── downstream/          frozen DGCNN segmentation, statistics and result CSVs
 │   ├── seg_downstream.py        segmentation of reconstructions
 │   ├── seg_stats.py             paired bootstrap confidence intervals
@@ -36,7 +36,8 @@ what-cd-misses/
 │   ├── per_organ_recall.py, summarize_per_organ.py, per_organ_figures.py
 │   ├── seg_dgcnn_s{0,1,2}.pth   frozen segmenter weights (3 seeds)
 │   └── *.csv                    per-run and per-frame results used in the paper
-├── paper/               paper source (added separately)
+├── paper/               paper material
+│   └── figures/         final figures used in the paper (main.tex and main.bib to be added)
 └── requirements.txt     pip freeze of the training environment
 ```
 
@@ -130,7 +131,7 @@ Scripts contain absolute MedicineBow paths. Edit them for other systems.
 | Generated-only coverage (Sec. 5.2) | `eval_ckpt_claude_v2.py --mode masked --match_density` |
 | Table 3 (segmentation) | `downstream/seg_s{0,1,2}.csv` and `seg_stats.csv` (ablations: `abl*_seg_s*.csv`, `abl_seg_stats.csv`; second seed: `seed2_s*.csv`) |
 | Per-organ coverage (Sec. 5.4) | `downstream/per_organ_*.csv`, from `per_organ_recall.py` and `summarize_per_organ.py` |
-| Figures | `pointmae/make_cd_scatter.py`, `make_figures.py`, `make_qualitative.py`, `render_views.py`, and outputs in `pointmae/figures/` |
+| Figures | Final versions in `paper/figures/`. Generated with `pointmae/make_cd_scatter.py`, `make_figures.py`, `make_qualitative.py` and `render_views.py` (working outputs in `pointmae/figures/`) |
 | Table 4 (compute) | `pointmae/timing_audit.py` and the training logs |
 | Growth-day probe | `pointmae/linear_probe.py`, `probe_results.json` |
 
