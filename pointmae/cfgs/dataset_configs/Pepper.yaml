@@ -1,0 +1,10 @@
+# cfgs/dataset_configs/Pepper.yaml
+NAME: PlantDataset
+DATA_PATH: /project/cvanddl-cea/sgaihre/Temporal_growth_prediction/Pepper_dataset
+N_POINTS: 8192
+VAL_FRACTION: 0.15
+TEST_FRACTION: 0.15
+CACHE: True
+RETURN_DICT: True   # this fork does data["points"].cuda()
+SPLIT_MANIFEST: ./experiments/pepper_split.json
+# GLOBAL_SCALE: 0.0   # leave unset; computed once, cached to scale.json 

@@ -1,0 +1,15 @@
+checkpoints/
+copy_ckpt.log
+*.pth
+!downstream/seg_dgcnn_s*.pth
+*.ply
+*.npy
+*.npz
+*.h5
+experiments/
+logs/
+data/
+__pycache__/
+build/
+*.egg-info/
+*.so
