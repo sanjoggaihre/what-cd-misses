@@ -2,7 +2,7 @@
 
 Code and results for **"What Chamfer Distance Misses: Coverage and Point Distribution in Masked Reconstruction of Plant Point Clouds"**, submitted to the WACV 2027 workshop HARVEST-Vision (under review).
 
-Sanjog Gaihre, Ali Torabi, Md Mahbubur Rahman, Yaqoob Majeed. University of Wyoming.
+Sanjog Gaihre, Ali Torabi, Md Mahbubur Rahman, Md Omor Faruk, Yaqoob Majeed. University of Wyoming.
 
 ## Overview
 
@@ -139,7 +139,7 @@ Scripts contain absolute MedicineBow paths. Edit them for other systems.
 ```bibtex
 @inproceedings{gaihre2027cdmisses,
   title     = {What Chamfer Distance Misses: Coverage and Point Distribution in Masked Reconstruction of Plant Point Clouds},
-  author    = {Gaihre, Sanjog and Torabi, Ali and Rahman, Md Mahbubur and Majeed, Yaqoob},
+  author    = {Gaihre, Sanjog and Torabi, Ali and Rahman, Md Mahbubur and Faruk, Md Omor and Majeed, Yaqoob},
   booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
   year      = {2027},
   note      = {Under review}
