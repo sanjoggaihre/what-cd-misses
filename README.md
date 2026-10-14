@@ -16,6 +16,31 @@ We evaluate the reconstructions with geometric metrics and a frozen DGCNN stem/l
 
 The `wacv2027-submission` tag marks the code as submitted.
 
+<p align="center">
+  <img src="paper/figures/method_diagram_final.png" width="95%" alt="Method overview">
+</p>
+
+*Method overview. (a) Masked predictions shifted by patch centres form the assembled cloud. Assembled CD-ℓ1 against the masked target replaces per-patch CD, and the spacing and coverage terms use the complete cloud. (b) Local spacing and (c) tail coverage. (d) A frozen DGCNN evaluates the complete output.*
+
+## Results at a glance
+
+<p align="center">
+  <img src="paper/figures/png/cd_vs_miou.png" width="55%" alt="CD-L1 against inferred mIoU">
+</p>
+
+*Complete-cloud CD-ℓ1 against inferred mIoU for the six objectives evaluated downstream. A lower CD goes with worse segmentation of the generated points.*
+
+<p align="center">
+  <img src="paper/figures/png/fig_qualitative_pg.png" width="95%" alt="Qualitative comparison on one leaf">
+</p>
+
+*One leaf from the test frame with the median recall gain of ours over Point-MAE. Point-MAE clusters and leaves gaps, DCD (α = 50, λ = 1) keeps clusters, repulsion (w_rep = 1) is even but strays off the leaf, and ours lies between.*
+
+| | Generated-point coverage at τ | Gated mIoU | Inferred stem IoU |
+|---|---|---|---|
+| Point-MAE | 9.5% | 0.397 | 0.371 |
+| Ours | 20.3% | 0.476 | 0.622 |
+
 ## Repository layout
 
 ```
@@ -38,6 +63,7 @@ what-cd-misses/
 │   └── *.csv                    per-run and per-frame results used in the paper
 ├── paper/               paper material
 │   └── figures/         final figures used in the paper (main.tex and main.bib to be added)
+│       └── png/         PNG copies of the PDF figures for this README
 └── requirements.txt     pip freeze of the training environment
 ```
 
