@@ -13,3 +13,10 @@ __pycache__/
 build/
 *.egg-info/
 *.so
+records/
+paper/*.pdf
+paper/*.tex
+paper/*.bib
+paper/*.sty
+paper/*.bst
+paper/README.md
