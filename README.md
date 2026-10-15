@@ -119,6 +119,7 @@ CUDA_VISIBLE_DEVICES=0 nohup python main.py --config cfgs/<config>.yaml --exp_na
 - **Shared settings:** 300 epochs, AdamW (lr 1e-4, weight decay 0.05), cosine schedule with 5 warm-up epochs.
 - **Batch:** global batch 4 with 8-step gradient accumulation. `total_bs` is the global batch and is divided across GPUs.
 - **Model:** mask ratio 0.6, 512 patches of 64 points.
+- **Extra seeds:** the two extra DCD runs use `cfgs/dcd_a50.yaml` with `--seed 1` and `--seed 2` on one H100 (exp names `dcd_a50_seed1`, `dcd_a50_seed2`).
 
 Checkpoints are written to `experiments/<config>/cfgs/<exp_name>/`.
 
