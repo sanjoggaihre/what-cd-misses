@@ -1,6 +1,6 @@
 # What Chamfer Distance Misses
 
-Code and results for **"What Chamfer Distance Misses: Coverage and Point Distribution in Masked Reconstruction of Plant Point Clouds"**, submitted to the WACV 2027 workshop HARVEST-Vision (under review).
+Code and results for **"What Chamfer Distance Misses: Coverage and Point Distribution in Masked Reconstruction of Plant Point Clouds"**, accepted at the WACV 2027 workshop HARVEST-Vision.
 
 Sanjog Gaihre, Ali Torabi, Md Mahbubur Rahman, Md Omor Faruk, Yaqoob Majeed. University of Wyoming.
 
@@ -14,7 +14,7 @@ We add two terms to CD on the assembled output cloud:
 
 We evaluate the reconstructions with geometric metrics and a frozen DGCNN stem/leaf segmenter. Across six objectives, a lower CD-ℓ1 goes with worse segmentation of the generated points. Our terms raise gated mIoU by 0.079 over Point-MAE, and an ablation traces nearly all of the gain to the spacing term.
 
-The `wacv2027-submission` tag marks the code as submitted.
+The `wacv2027-submission` tag marks the code as submitted for review.
 
 <p align="center">
   <img src="paper/figures/method_diagram_final.png" width="95%" alt="Method overview">
@@ -159,8 +159,8 @@ Scripts contain absolute MedicineBow paths. Edit them for other systems.
 | Table 3 (segmentation) | `downstream/seg_s{0,1,2}.csv` and `seg_stats.csv` (ablations: `abl*_seg_s*.csv`, `abl_seg_stats.csv`; second seed: `seed2_s*.csv`; extra DCD seeds: `dcdseed_s*.csv`, `dcdseed_stats.csv`) |
 | Per-organ coverage (Sec. 5.4) | `downstream/per_organ_*.csv`, from `per_organ_recall.py` and `summarize_per_organ.py` |
 | Figures | Final versions in `paper/figures/`. Generated with `pointmae/make_cd_scatter.py`, `make_figures.py`, `make_qualitative.py` and `render_views.py` (working outputs in `pointmae/figures/`) |
-| Table 4 (compute) | `pointmae/timing_audit.py` and the training logs |
-| Growth-day probe | `pointmae/linear_probe.py`, `probe_results.json` |
+| Reference duplicates and r(q) checks (Sec. 3.4) | `downstream/gt_checks.py` on the saved `*_gt.ply` test clouds |
+| Computational cost (Sec. 5.7) | `pointmae/timing_audit.py` and the training logs |
 
 ## Citation
 
@@ -169,8 +169,7 @@ Scripts contain absolute MedicineBow paths. Edit them for other systems.
   title     = {What Chamfer Distance Misses: Coverage and Point Distribution in Masked Reconstruction of Plant Point Clouds},
   author    = {Gaihre, Sanjog and Torabi, Ali and Rahman, Md Mahbubur and Faruk, Md Omor and Majeed, Yaqoob},
   booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
-  year      = {2027},
-  note      = {Under review}
+  year      = {2027}
 }
 ```
 
